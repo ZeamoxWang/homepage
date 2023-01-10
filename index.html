@@ -27,7 +27,7 @@
     h5,
     h6,
     .w3-wide {
-      font-family: "Montserrat", sans-serif;
+      font-family: "Montserrat", "Lato", Verdana, Helvetica, sans-serif;
     }
   </style>
 
@@ -175,6 +175,28 @@
 
       <img style="width:96%;" src="images/map.png">
 
+      <a href="javascript:showPaperMessage()">paper</a>
+
+      <script>
+        function showPaperMessage() {
+            // expand a message
+            status = document.getElementById("message").style.display;
+            if (status != 'block')
+                document.getElementById("message").style.display = 'block';
+            else
+                document.getElementById("message").style.display = 'none'
+
+        }
+    </script>
+    
+    <style>
+        #message {
+          display: none;
+        
+        }
+      </style>
+    <div id="message" >Thanks for your interest! But I am very sorry that the paper is currently undergoing double-blind review, so I am unable to make it available on the public website at this time. Please email me via <font><b>haianjin0415@gmail.com</b></font> to get the preprint if you are interested! </div>
+
       <p class="w3-justify">
         I built this framework on my own, including crawling the house price data in Shenzhen, constructing the network, and analyzing the error. In November 2021, a sophomore schoolmate was introduced by my advisor to help me visualize the data and typeset the paper, and the research progressed very fast. Our research has deeply improved the model GNNWR, not only utilized it in socioeconomic field, but also perfected the examination process.
       </p>
@@ -244,7 +266,7 @@
       <p class="w3-left-align" style="line-height:200%"><strong>AT THE UNIVERSITY</strong></p>
       <p class="w3-left-align" style="line-height:200%">National Scholarship, Ministry of Education of P.R. China</p>
       <p class="w3-left-align" style="line-height:200%">Zhejiang University Scholarship - First Prize</p>
-      <p class="w3-left-align" style="line-height:200%">National Geographical Information Science Application Competition 2021 - Outstanding Winner</p>
+      <p class="w3-left-align" style="line-height:200%">National Geographical Information Science Application Competition 2021 - Grand Prize</p>
       <p class="w3-left-align" style="line-height:200%">Zhejiang University Art Avant-garde (2021)</p>
       <p></p>
       <p class="w3-left-align" style="line-height:200%"><strong>AT THE SENIOR HIGH SCHOOL</strong></p>
