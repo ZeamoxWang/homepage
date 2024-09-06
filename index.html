@@ -137,7 +137,7 @@
             stroke-linecap: round;
             stroke-linejoin: round;
           }
-        
+      
           /* 链接样式 */
           .social-link {
             padding: 0.5rem;
@@ -149,24 +149,36 @@
             transition: all 0.3s ease;
             cursor: pointer;
           }
-        
+      
           .social-link:hover {
             color: #1f2937; /* 深灰色 */
             border-color: #1f2937;
           }
-        
+      
           /* 深色模式样式 */
           .dark .social-link {
             color: #9ca3af; /* 深色模式下的灰色 */
           }
-        
+      
           .dark .social-link:hover {
             color: #d1d5db; /* 浅灰色 */
             border-color: #d1d5db;
           }
+      
+          /* 水平对齐 */
+          .flex {
+            display: flex;
+            justify-content: center;
+            gap: 1rem; /* 控制图标间的距离 */
+          }
+      
+          /* 容器居中 */
+          .w3-center {
+            text-align: center;
+          }
         </style>
-        
-        <ul class="flex justify-center gap-4">
+      
+        <ul class="flex">
           <!-- Twitter -->
           <li>
             <a href="https://twitter.com/_WesChang" target="_blank" rel="noopener" aria-label="Twitter" class="social-link">
@@ -175,7 +187,7 @@
               </svg>
             </a>
           </li>
-        
+      
           <!-- LinkedIn -->
           <li>
             <a href="https://linkedin.com/in/wchang22" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
@@ -188,7 +200,7 @@
               </svg>
             </a>
           </li>
-        
+      
           <!-- GitHub -->
           <li>
             <a href="https://github.com/wchang22" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
@@ -197,7 +209,7 @@
               </svg>
             </a>
           </li>
-        
+      
           <!-- Email -->
           <li>
             <a href="mailto:wesleycanada@gmail.com" target="_blank" rel="noopener" aria-label="Email" class="social-link">
@@ -207,7 +219,7 @@
               </svg>
             </a>
           </li>
-        
+      
           <!-- Google Scholar -->
           <li>
             <a href="https://scholar.google.ca/citations?user=RRvvNCIAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" class="social-link">
@@ -219,13 +231,6 @@
             </a>
           </li>
         </ul>
-        
-      </p>
-      <p class="w3-center">
-        Languages: C/C++ &nbsp/&nbsp JAVA &nbsp/&nbsp Python &nbsp/&nbsp SQL &nbsp/&nbsp R
-      </p>
-      <p class="w3-center">
-        Platforms: ArcGIS &nbsp/&nbsp Matlab &nbsp/&nbsp Postgre
       </p>
       </tbody>
       </table>
