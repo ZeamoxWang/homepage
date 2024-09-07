@@ -377,17 +377,19 @@
       document.addEventListener('DOMContentLoaded', function() {
         const carousel = document.querySelector('.carousel-images');
         const images = carousel.querySelectorAll('img');
+        const totalImages = images.length;
         let index = 0;
     
         function showNextImage() {
-          index = (index + 1) % images.length;
-          const offset = -index * 100;
+          index = (index + 1) % totalImages;
+          const offset = -index * 100; // 每次滚动一张图片的宽度
           carousel.style.transform = `translateX(${offset}%)`;
         }
     
-        setInterval(showNextImage, 3000); // Change image every 3 seconds
+        setInterval(showNextImage, 3000); // 每3秒切换一次图片
       });
     </script>
+    
 
 
     <div class="w3-center w3-padding-24">
