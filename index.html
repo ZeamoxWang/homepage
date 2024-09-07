@@ -35,6 +35,27 @@
   </style>
 
   <style>
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+  }
+  
+  .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-images img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+  }
+  </style>
+
+
+  <style>
     /* 为中文字符设置现代字体，并调整字间距 */
     .chinese-text {
       font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", "Source Han Sans", sans-serif;
@@ -89,7 +110,6 @@
       <a href="#home" class="w3-bar-item w3-button">Home</a>
       <a href="#education" class="w3-bar-item w3-button">Education</a>
       <a href="#research" class="w3-bar-item w3-button">Research</a>
-      <a href="#awards" class="w3-bar-item w3-button">Awards</a>
       <a href="#hobbies" class="w3-bar-item w3-button">Hobbies</a>
       <a href="#photography" class="w3-bar-item w3-button">Photography</a>
     </div>
@@ -330,66 +350,42 @@
       <h2>Photography</h2>
       <p>After an incredible journey around the world, I'm excited to share some breathtaking views with you. Join me in exploring these beautiful moments captured through my lens!</p>
       
-      <!-- Photo Gallery -->
-      <div class="w3-row">
-        <!-- Photo 1 -->
-        <div class="w3-col l4 m6 s12">
-          <img src="photography/photo (1).jpg" alt="Description of photo 1" class="w3-image">
-        </div>
-        <!-- Photo 2 -->
-        <div class="w3-col l4 m6 s12">
-          <img src="photography/photo (2).jpg" alt="Description of photo 2" class="w3-image">
-        </div>
-        <!-- Photo 3 -->
-        <div class="w3-col l4 m6 s12">
-          <img src="photography/photo (3).jpg" alt="Description of photo 3" class="w3-image">
-        </div>
-        <!-- Photo 4 -->
-        <div class="w3-col l4 m6 s12">
-          <img src="photography/photo (4).jpg" alt="Description of photo 4" class="w3-image">
-        </div>
-        <!-- Photo 5 -->
-        <div class="w3-col l4 m6 s12">
-          <img src="photography/photo (5).jpg" alt="Description of photo 5" class="w3-image">
-        </div>
-        <!-- Photo 6 -->
-        <div class="w3-col l4 m6 s12">
-          <img src="photography/photo (6).jpg" alt="Description of photo 6" class="w3-image">
-        </div>
-        <!-- Photo 7 -->
-        <div class="w3-col l4 m6 s12">
-          <img src="photography/photo (7).jpg" alt="Description of photo 7" class="w3-image">
-        </div>
-        <!-- Photo 8 -->
-        <div class="w3-col l4 m6 s12">
-          <img src="photography/photo (8).jpg" alt="Description of photo 8" class="w3-image">
-        </div>
-        <!-- Photo 9 -->
-        <div class="w3-col l4 m6 s12">
-          <img src="photography/photo (9).jpg" alt="Description of photo 9" class="w3-image">
-        </div>
-        <!-- Photo 10 -->
-        <div class="w3-col l4 m6 s12">
-          <img src="photography/photo (10).jpg" alt="Description of photo 10" class="w3-image">
-        </div>
-        <!-- Photo 11 -->
-        <div class="w3-col l4 m6 s12">
-          <img src="photography/photo (11).jpg" alt="Description of photo 11" class="w3-image">
-        </div>
-        <!-- Photo 12 -->
-        <div class="w3-col l4 m6 s12">
-          <img src="photography/photo (12).jpg" alt="Description of photo 12" class="w3-image">
-        </div>
-        <!-- Photo 13 -->
-        <div class="w3-col l4 m6 s12">
-          <img src="photography/photo (13).jpg" alt="Description of photo 13" class="w3-image">
-        </div>
-        <!-- Photo 14 -->
-        <div class="w3-col l4 m6 s12">
-          <img src="photography/photo (14).jpg" alt="Description of photo 14" class="w3-image">
+      <!-- Photo Carousel -->
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="photography/photo (1).jpg" alt="Description of photo 1">
+          <img src="photography/photo (2).jpg" alt="Description of photo 2">
+          <img src="photography/photo (3).jpg" alt="Description of photo 3">
+          <img src="photography/photo (4).jpg" alt="Description of photo 4">
+          <img src="photography/photo (5).jpg" alt="Description of photo 5">
+          <img src="photography/photo (6).jpg" alt="Description of photo 6">
+          <img src="photography/photo (7).jpg" alt="Description of photo 7">
+          <img src="photography/photo (8).jpg" alt="Description of photo 8">
+          <img src="photography/photo (9).jpg" alt="Description of photo 9">
+          <img src="photography/photo (10).jpg" alt="Description of photo 10">
+          <img src="photography/photo (11).jpg" alt="Description of photo 11">
+          <img src="photography/photo (12).jpg" alt="Description of photo 12">
+          <img src="photography/photo (13).jpg" alt="Description of photo 13">
+          <img src="photography/photo (14).jpg" alt="Description of photo 14">
         </div>
       </div>
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.querySelector('.carousel-images');
+        const images = carousel.querySelectorAll('img');
+        let index = 0;
+    
+        function showNextImage() {
+          index = (index + 1) % images.length;
+          const offset = -index * 100;
+          carousel.style.transform = `translateX(${offset}%)`;
+        }
+    
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+      });
+    </script>
 
 
     <div class="w3-center w3-padding-24">
