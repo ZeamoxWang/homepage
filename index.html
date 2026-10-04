@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="description" content="Zimo Wang is PhD student at UCSD.">
+  <meta name="description" content="Zimo Wang is a PhD candidate at UCSD.">
   <meta name="keywords" content="Zimo Wang, 王子墨, wangzimo, Zimo, Wang, Graphics, Statistics, Computer, Vision">
   <meta name="author" content="Zimo Wang" />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
@@ -46,6 +46,61 @@
   </style>
 
   <style>
+  .pdmd-figure {
+    display: grid;
+    grid-template-columns: 1.351351fr 0.566038fr 0.566038fr;
+    align-items: start;
+    gap: 8px;
+    width: 96%;
+    margin: 16px auto;
+  }
+
+  .pdmd-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .pdmd-targets {
+    display: contents;
+  }
+
+  .pdmd-targets figure {
+    min-width: 0;
+    margin: 0;
+  }
+
+  .pdmd-targets figure:first-child img {
+    outline: 3px solid #d55e00;
+    outline-offset: -3px;
+  }
+
+  .pdmd-targets figure:last-child img {
+    outline: 3px solid #009e73;
+    outline-offset: -3px;
+  }
+
+  .pdmd-targets figcaption {
+    margin-top: 6px;
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  @media (max-width: 600px) {
+    .pdmd-figure {
+      grid-template-columns: 1fr;
+    }
+
+    .pdmd-targets {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
   .carousel {
     position: relative;
     overflow: hidden;
@@ -152,7 +207,7 @@
       <p class="w3-justify"
         style="font-family: 'Lora', serif;
         width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
-        Hi, I am Zimo Wang <span class="chinese-text">王子墨</span>, a Data Science Ph.D. student at <a href="https://datascience.ucsd.edu/">University of California, San Diego</a>. I’m very lucky to be advised by <a href="https://cseweb.ucsd.edu/~tzli/">Professor Tzu-Mao Li</a>, who is both supportive and has a great sense of humor. Together, we explore problems in computer graphics, vision, and beyond, inspired by statistical methods and elegant mathematical ideas.
+        Hi, I am Zimo Wang <span class="chinese-text">王子墨</span>, a Data Science Ph.D. candidate at <a href="https://datascience.ucsd.edu/">University of California, San Diego</a>. I’m very lucky to be advised by <a href="https://cseweb.ucsd.edu/~tzli/">Professor Tzu-Mao Li</a>, who is both supportive and has a great sense of humor. Together, we explore problems in computer graphics, vision, and beyond, inspired by statistical methods and elegant mathematical ideas.
       </p>
       <p class="w3-justify"
         style="font-family: 'Lora', serif;
@@ -284,8 +339,10 @@
     <!-- The Experience Section -->
     <div class="w3-container w3-light-blue w3-padding-32" id="experience" style="font-family: 'Lora', serif;">
       <h2 style="font-family: 'JetBrains Mono', monospace;">Experience</h2>
-      <p>2025 Summer: Research Intern at Adobe Research, fortunately advised by <a href="https://yyuting.github.io/">Yuting Yang</a> and <a href="https://people.csail.mit.edu/jiawen/">Jiawen Chen</a>. Worked on generating color mappings from image pairs.</p>
-      <p>2023 - Now: Data Science PhD Student, University of California San Diego</p>
+      <p>2023 - Now: Data Science PhD Candidate, University of California San Diego</p>
+      <p>2026 Summer: Research Intern at ByteDance, San Jose, advised by <a href="https://guochengqian.github.io/">Gordon Guocheng Qian</a> and <a href="http://www.chongyangma.com/">Chongyang Ma</a>. Worked on distillation for video generation.</p>
+      <p>2025 Summer: Research Intern at Adobe Research, advised by <a href="https://yyuting.github.io/">Yuting Yang</a> and <a href="https://people.csail.mit.edu/jiawen/">Jiawen Chen</a>. Worked on generating color mappings from image pairs.</p>
+      <p>2023 - 2026: Data Science M.S. (Master's along the way), University of California San Diego</p>
       <p>2019 - 2023: Majoring in Geographical Information Science, Statistics, Zhejiang University</p>
       <p>2019 - 2023: Minoring in Computer Science and Technology, Zhejiang University</p>
     </div>
@@ -293,6 +350,68 @@
     <!-- The Research Section -->
     <div class="w3-container w3-padding-32" id="research">
       <h2 style="font-family: 'JetBrains Mono', monospace;">Research</h2>
+
+      <div class="w4-container">
+        <h3>
+          <font face=Garamond><strong><li>PDMD: Projected Distribution Matching Distillation for Video Diffusion Models</li></strong></font>
+        </h3>
+
+        <font face=Garamond size="4"><strong>
+          <p class="w3-justify">
+            <a style="color: #447ec9" href="https://pdmd2026.github.io/">Project Page</a> | <a style="color: #447ec9" href="https://arxiv.org/abs/2609.35768">Paper</a> | <a style="color: #447ec9" href="https://github.com/ZeamoxWang/pdmd">Code</a>
+          </p>
+        </strong></font>
+
+        <div class="pdmd-figure">
+          <img class="pdmd-diagram" src="images/pdmd-fig3-intuition.png" alt="Figure 3: PDMD projects the DMD update perpendicular to the student-critic endpoint residual" loading="lazy">
+          <div class="pdmd-targets">
+            <figure>
+              <img src="images/pdmd-fig3-dmd.jpg" alt="DMD update target with visible artifacts" loading="lazy">
+              <figcaption>DMD target</figcaption>
+            </figure>
+            <figure>
+              <img src="images/pdmd-fig3-pdmd.jpg" alt="PDMD update target with fewer artifacts" loading="lazy">
+              <figcaption>PDMD target</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <h6>
+          <i><strong style="font-weight: 900;">Zimo Wang</strong>, Junkun Yuan, Angtian Wang, Haotian Yang, Canyu Zhang, Siyuan Yuan, Xingchang Huang, Bo Liu, Yizhi Wang, Yiding Yang, Chongyang Ma, Gordon Guocheng Qian.
+          <br>
+          arXiv preprint. 2026.</i>
+        </h6>
+
+        <h6>
+          tl;dr: PDMD improves the diffusion distillation with a one-line projection that filters student's training error. Nothing else changes: no auxiliary loss, no additional network, no extra model pass.
+        </h6>
+      </div>
+
+      <div class="w4-container">
+        <h3>
+          <font face=Garamond><strong><li>Distance Marching for Generative Modeling</li></strong></font>
+        </h3>
+
+        <font face=Garamond size="4"><strong>
+          <p class="w3-justify">
+            <a style="color: #447ec9" href="https://arxiv.org/abs/2602.02928">Paper</a> | Advisor: <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a>
+          </p>
+        </strong></font>
+
+        <div style="text-align: center;">
+          <img style="width: 76%;" src="images/distance-marching.png" alt="Distance Marching follows a distance field toward the data manifold, compared with flow matching" loading="lazy">
+        </div>
+
+        <h6>
+          <i><strong style="font-weight: 900;">Zimo Wang</strong>, Ishit Mehta, Haolin Lu, Xunpeng Huang, Chung-En Sun, Ge Yan, Tsui-Wei Weng, Tzu-Mao Li.
+          <br>
+          Conference on Neural Information Processing Systems. 2026.</i>
+        </h6>
+
+        <h6>
+          tl;dr: Distance-field modeling enables image generation without time conditioning, with losses that focus on closer targets and two principled samplers that guide noise toward the data manifold faster.
+        </h6>
+      </div>
 
       <div class="w4-container">
         <h3>
@@ -312,7 +431,7 @@
         <h6>
           <i><strong style="font-weight: 900;">Zimo Wang*</strong>, Cheng Wang*, Taiki Yoshino, Sirui Tao, Ziyang Fu, Tzu-Mao Li. * indicates equal contribution.
           <br>
-          Conference on Computer Vision and Pattern Recognition <strong>(Highlight)</strong>. 2025.</i> 
+          Conference on Computer Vision and Pattern Recognition <strong>(Highlight)</strong>. 2025.</i>
         </h6>
 
         <h6>
@@ -380,7 +499,7 @@
     <div class="w3-container w3-light-blue w3-padding-32" id="hobbies">
       <h2>Hobbies</h2>
       <p>
-        <li> As a member of the UCSD table tennis team, I don’t mind playing against most people using just my phone screen. I always bring my racket🏓 to academic venues. Email me for a friendly match!
+        <li> As a member of the UCSD table tennis team, I don’t mind playing against most people using my phone as a paddle. I always bring my racket🏓 to academic venues. Email me for a friendly match!
       </p>
 
       
