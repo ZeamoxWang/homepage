@@ -138,9 +138,8 @@
 
     .yi-yi img {
       display: block;
-      width: calc(100% - 120px);
+      width: 100%;
       height: auto;
-      margin-left: auto;
     }
 
     .yi-yi blockquote {
@@ -151,17 +150,28 @@
       position: relative;
     }
 
+    .yi-yi-still::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg,
+        rgba(246, 248, 243, 0.64) 0%,
+        rgba(246, 248, 243, 0.58) 22%,
+        rgba(246, 248, 243, 0.54) 38%,
+        rgba(246, 248, 243, 0.12) 46%,
+        rgba(246, 248, 243, 0) 56%);
+      pointer-events: none;
+    }
+
     .yi-yi-chinese {
       position: absolute;
-      bottom: -18px;
-      left: 0;
-      width: 320px;
+      z-index: 1;
+      top: 50%;
+      left: 4%;
+      width: 34%;
       margin: 0;
-      padding: 20px 24px;
-      background: rgba(250, 251, 248, 0.94);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      color: #303b35;
+      transform: translateY(-50%);
+      color: #101b15;
       font-size: 1.067rem;
       line-height: 1.85;
       text-wrap: pretty;
@@ -176,7 +186,7 @@
     }
 
     .yi-yi-english {
-      margin: 42px 0 0;
+      margin: 20px 0 0;
       color: #59616a;
       font-family: 'Lora', serif;
       font-size: 1rem;
@@ -201,18 +211,15 @@
         padding: 0 20px;
       }
 
-      .yi-yi img {
-        width: 100%;
+      .yi-yi-still::after {
+        display: none;
       }
 
       .yi-yi-chinese {
         position: static;
         width: auto;
         margin-top: 20px;
-        padding: 0;
-        background: none;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
+        transform: none;
         color: #28323a;
         font-size: 1.133rem;
         line-height: 1.8;
