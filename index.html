@@ -128,6 +128,66 @@
     .chinese-text {
       font-family: 'LXGW WenKai', serif;
     }
+
+    .yi-yi {
+      max-width: 648px;
+      margin: 8px auto 56px;
+      padding: 0 24px;
+      scroll-margin-top: 108px;
+    }
+
+    .yi-yi img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .yi-yi blockquote {
+      margin: 24px 0 0;
+    }
+
+    .yi-yi-chinese {
+      margin: 0;
+      color: #28323a;
+      font-size: 1.4rem;
+      line-height: 1.85;
+    }
+
+    .yi-yi-english {
+      margin: 16px 0 0;
+      color: #59616a;
+      font-family: 'Lora', serif;
+      font-size: 1.067rem;
+      line-height: 1.75;
+    }
+
+    .yi-yi figcaption {
+      margin-top: 16px;
+      color: #59616a;
+      font-size: 0.933rem;
+      text-align: right;
+    }
+
+    .yi-yi cite {
+      font-style: normal;
+    }
+
+    @media (max-width: 600px) {
+      .yi-yi {
+        margin-top: 0;
+        margin-bottom: 40px;
+        padding: 0 20px;
+      }
+
+      .yi-yi blockquote {
+        margin-top: 20px;
+      }
+
+      .yi-yi-chinese {
+        font-size: 1.267rem;
+        line-height: 1.8;
+      }
+    }
   </style>
   
 
@@ -346,6 +406,16 @@
       </tbody>
       </table>
     </div>
+
+    <figure class="yi-yi" id="yi-yi">
+      <img src="images/yi-yi.jpg" width="720" height="391"
+        alt="Yang-Yang holding a camera to his eye in Yi Yi" loading="lazy" decoding="async">
+      <blockquote>
+        <p class="yi-yi-chinese chinese-text" lang="zh-Hans">我不知道的事情太多了，所以，你知道我以后想做什么吗？我要去告诉别人他们不知道的事，给别人看他们看不到的东西，我想，这样一定天天都很好玩。</p>
+        <p class="yi-yi-english" lang="en">There’s so much I don’t know. So, do you know what I want to do someday? I want to tell people things they don’t know and show them things they can’t see. I think that would make every day a lot of fun.</p>
+      </blockquote>
+      <figcaption><cite><span class="chinese-text" lang="zh-Hans">一一</span> · Yi Yi</cite></figcaption>
+    </figure>
 
     <!-- The Experience Section -->
     <div class="w3-container w3-light-blue w3-padding-32" id="experience" style="font-family: 'Lora', serif;">
