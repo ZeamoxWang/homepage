@@ -143,15 +143,46 @@
     }
 
     .yi-yi blockquote {
-      margin: 24px 0 0;
+      margin: 0;
+    }
+
+    .yi-yi-still {
+      position: relative;
+    }
+
+    .yi-yi-still::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg,
+        rgba(8, 18, 18, 0.88) 0%,
+        rgba(8, 18, 18, 0.82) 34%,
+        rgba(8, 18, 18, 0.6) 40%,
+        rgba(8, 18, 18, 0) 58%);
+      pointer-events: none;
     }
 
     .yi-yi-chinese {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 24px;
+      width: 190px;
+      max-width: 34%;
       margin: 0;
-      color: #28323a;
-      font-size: 1.2rem;
-      line-height: 1.85;
-      text-wrap: balance;
+      transform: translateY(-50%);
+      color: #f7f4ea;
+      font-size: 1.067rem;
+      line-height: 1.65;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+    }
+
+    .yi-yi-chinese span {
+      display: block;
+    }
+
+    .yi-yi-chinese .yi-yi-stanza + .yi-yi-stanza {
+      margin-top: 8px;
     }
 
     .yi-yi-english {
@@ -180,13 +211,29 @@
         padding: 0 20px;
       }
 
-      .yi-yi blockquote {
-        margin-top: 20px;
+      .yi-yi-still::after {
+        display: none;
       }
 
       .yi-yi-chinese {
+        position: static;
+        width: auto;
+        max-width: none;
+        margin-top: 20px;
+        transform: none;
+        color: #28323a;
         font-size: 1.133rem;
         line-height: 1.8;
+        text-wrap: balance;
+        text-shadow: none;
+      }
+
+      .yi-yi-chinese span {
+        display: inline;
+      }
+
+      .yi-yi-chinese .yi-yi-stanza + .yi-yi-stanza {
+        margin-top: 0;
       }
     }
   </style>
@@ -409,10 +456,12 @@
     </div>
 
     <figure class="yi-yi" id="yi-yi">
-      <img src="images/yi-yi.jpg" width="720" height="391"
-        alt="Yang-Yang holding a camera to his eye in Yi Yi" loading="lazy" decoding="async">
       <blockquote>
-        <p class="yi-yi-chinese chinese-text" lang="zh-Hans">我不知道的事情太多了，所以，你知道我以后想做什么吗？我要去告诉别人他们不知道的事，给别人看他们看不到的东西，我想，这样一定天天都很好玩。</p>
+        <div class="yi-yi-still">
+          <img src="images/yi-yi.jpg" width="720" height="391"
+            alt="Yang-Yang holding a camera to his eye in Yi Yi" loading="lazy" decoding="async">
+          <p class="yi-yi-chinese chinese-text" lang="zh-Hans"><span class="yi-yi-stanza"><span>我不知道的事情太多了，</span><span>所以，你知道我以后</span><span>想做什么吗？</span></span><span class="yi-yi-stanza"><span>我要去告诉别人</span><span>他们不知道的事，</span><span>给别人看他们</span><span>看不到的东西，</span></span><span class="yi-yi-stanza"><span>我想，这样一定</span><span>天天都很好玩。</span></span></p>
+        </div>
         <!-- English subtitle wording: Edward Yang and Tony Rayns, as credited at
           https://www.criterion.com/films/781-yi-yi and transcribed at
           https://www.subtitlecat.com/subs/9/Yi%20Yi.html.
