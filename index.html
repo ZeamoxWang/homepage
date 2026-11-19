@@ -125,6 +125,14 @@
 
   <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet" />
   <style>
+    @font-face {
+      font-family: 'Yi Yi Handwriting';
+      src: url('fonts/yi-yi-handwriting.woff2') format('woff2');
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
     .chinese-text {
       font-family: 'LXGW WenKai', serif;
     }
@@ -172,6 +180,7 @@
       margin: 0;
       transform: translateY(-50%);
       color: #101b15;
+      font-family: 'Yi Yi Handwriting', 'LXGW WenKai', cursive;
       font-size: 1.067rem;
       line-height: 1.85;
       text-wrap: pretty;
@@ -193,11 +202,19 @@
       line-height: 1.75;
     }
 
-    .yi-yi figcaption {
-      margin-top: 16px;
-      color: #59616a;
+    .yi-yi-ending {
+      white-space: nowrap;
+    }
+
+    .yi-yi-attribution {
+      display: inline-block;
+      margin-left: 0.65em;
       font-size: 0.933rem;
-      text-align: right;
+      white-space: nowrap;
+    }
+
+    .yi-yi-attribution .chinese-text {
+      font-family: 'Yi Yi Handwriting', 'LXGW WenKai', cursive;
     }
 
     .yi-yi cite {
@@ -464,14 +481,13 @@
             alt="Yang-Yang holding a camera to his eye in Yi Yi" loading="lazy" decoding="async">
           <p class="yi-yi-chinese chinese-text" lang="zh-Hans"><span>我不知道的事情太多了，所以，你知道我以后想做什么吗？</span><span>我要去告诉别人他们不知道的事，给别人看他们看不到的东西，我想，这样一定天天都很好玩。</span></p>
         </div>
-        <!-- English subtitle wording: Edward Yang and Tony Rayns, as credited at
+      </blockquote>
+      <!-- English subtitle wording: Edward Yang and Tony Rayns, as credited at
           https://www.criterion.com/films/781-yi-yi and transcribed at
           https://www.subtitlecat.com/subs/9/Yi%20Yi.html.
           Excerpt starts after "But, Grandma," to match the Chinese selection;
           subtitle line breaks are joined and sentence punctuation is added. -->
-        <p class="yi-yi-english" lang="en">I know so little. Do you know what I want to do when I grow up? I want to tell people things they don’t know. Show them stuff they haven’t seen. It’ll be so much fun.</p>
-      </blockquote>
-      <figcaption><cite><a class="chinese-text" lang="zh-Hans" href="https://zh.wikipedia.org/wiki/%E4%B8%80%E4%B8%80" target="_blank" rel="noopener noreferrer">一一</a> · <a href="https://en.wikipedia.org/wiki/Yi_Yi" lang="en" target="_blank" rel="noopener noreferrer">Yi Yi</a></cite></figcaption>
+      <figcaption class="yi-yi-english"><span lang="en">I know so little. Do you know what I want to do when I grow up? I want to tell people things they don’t know. Show them stuff they haven’t seen. </span><span class="yi-yi-ending"><span lang="en">It’ll be so much fun.</span> <cite class="yi-yi-attribution"><a class="chinese-text" lang="zh-Hans" href="https://zh.wikipedia.org/wiki/%E4%B8%80%E4%B8%80" target="_blank" rel="noopener noreferrer">一一</a> · <a href="https://en.wikipedia.org/wiki/Yi_Yi" lang="en" target="_blank" rel="noopener noreferrer">Yi Yi</a></cite></span></figcaption>
     </figure>
 
     <!-- The Experience Section -->
