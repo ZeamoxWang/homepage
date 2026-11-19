@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>一一 · 手写字体对比</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap">
+<style>
+@font-face { font-family:'Yi Yi Preview A'; src:url('yi-yi-fonts/yozai.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:'Yi Yi Preview B'; src:url('yi-yi-fonts/qingsong2.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:'Yi Yi Preview C'; src:url('yi-yi-fonts/qingsong1.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:'Yi Yi Preview D'; src:url('yi-yi-fonts/wenkai.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }    .yi-yi {
+      max-width: 768px;
+      margin: 8px auto 56px;
+      padding: 0 24px;
+      scroll-margin-top: 108px;
+    }
+
+    .yi-yi img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .yi-yi blockquote {
+      margin: 0;
+    }
+
+    .yi-yi-still {
+      position: relative;
+    }
+
+    .yi-yi-still::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg,
+        rgba(246, 248, 243, 0.64) 0%,
+        rgba(246, 248, 243, 0.58) 22%,
+        rgba(246, 248, 243, 0.54) 38%,
+        rgba(246, 248, 243, 0.12) 46%,
+        rgba(246, 248, 243, 0) 56%);
+      pointer-events: none;
+    }
+
+    .yi-yi-chinese {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 4%;
+      width: 34%;
+      margin: 0;
+      transform: translateY(-50%);
+      color: #101b15;
+      font-family: 'Yi Yi Handwriting', 'LXGW WenKai', cursive;
+      font-size: 1.067rem;
+      line-height: 1.85;
+      text-wrap: pretty;
+    }
+
+    .yi-yi-chinese span {
+      display: block;
+    }
+
+    .yi-yi-chinese span + span {
+      margin-top: 12px;
+    }
+
+    .yi-yi-english {
+      margin: 20px 0 0;
+      color: #59616a;
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .yi-yi-ending {
+      white-space: nowrap;
+    }
+
+    .yi-yi-attribution {
+      display: inline-block;
+      margin-left: 0.65em;
+      font-size: 0.933rem;
+      white-space: nowrap;
+    }
+
+    .yi-yi-attribution .chinese-text {
+      font-family: 'Yi Yi Handwriting', 'LXGW WenKai', cursive;
+    }
+
+    .yi-yi cite {
+      font-style: normal;
+    }
+
+    @media (max-width: 700px) {
+      .yi-yi {
+        margin-top: 0;
+        margin-bottom: 40px;
+        padding: 0 20px;
+      }
+
+      .yi-yi-still::after {
+        display: none;
+      }
+
+      .yi-yi-chinese {
+        position: static;
+        width: auto;
+        margin-top: 20px;
+        transform: none;
+        color: #28323a;
+        font-size: 1.133rem;
+        line-height: 1.8;
+        text-wrap: balance;
+      }
+
+      .yi-yi-chinese span {
+        display: inline;
+      }
+
+      .yi-yi-chinese span + span {
+        margin-top: 0;
+      }
+
+      .yi-yi-english {
+        margin-top: 16px;
+      }
+    }
+
+* {box-sizing:border-box}
+html {font-size:15px}
+body {margin:0;padding:28px 24px 36px;background:#fff;color:#26332d;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+main {max-width:1472px;margin:auto}
+.intro {display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+h1 {margin:0;font-size:22px;font-weight:500;letter-spacing:.03em}
+.intro p {margin:0;color:#758077;font-size:13px}
+.controls {display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 28px}
+button {font:inherit;font-size:13px;cursor:pointer;border:1px solid #dce2dd;border-radius:5px;background:#fff;color:#59665d;padding:8px 14px}
+button[aria-pressed="true"] {background:#263c31;border-color:#263c31;color:#fff}
+button:hover {border-color:#627b6a}
+button:focus-visible,a:focus-visible {outline:2px solid #6e8e77;outline-offset:4px}
+.samples {display:grid;grid-template-columns:minmax(0,720px);justify-content:center;gap:32px}
+.sample {min-width:0}
+.sample[hidden] {display:none}
+.sample-label {margin-bottom:12px}
+.sample-label h2 {margin:0 0 5px;display:flex;align-items:center;gap:10px;font-size:16px;font-weight:500}
+.letter {font:12px Georgia,serif;color:#78847c;border:1px solid #dfe5df;border-radius:50%;width:23px;height:23px;display:inline-flex;align-items:center;justify-content:center}
+.sample-label p {font-size:12px;color:#7b847e;margin:0 0 0 33px}
+.yi-yi {margin:0;padding:0;max-width:none}
+.yi-yi-chinese,.yi-yi-attribution .chinese-text {font-family:var(--quote-font),serif;font-weight:400;font-synthesis:none}
+a {color:inherit;text-underline-offset:3px}
+.sources {margin:30px auto 0;color:#8a938d;font-size:11px;line-height:1.8;text-align:center}
+.sources a {margin:0 6px}
+@media(min-width:1520px) {.samples:not(.single) {grid-template-columns:repeat(2,minmax(0,720px))}}
+@media(max-width:700px) {
+ body {padding:24px 20px}
+ .intro {display:block}
+ .intro p {margin-top:10px;line-height:1.7}
+ .controls {gap:6px;margin-bottom:24px}
+ button {padding:8px 10px}
+ .samples {gap:36px}
+ .sample-label {margin-bottom:14px}
+}
+</style></head><body><main>
+<header class="intro"><h1>一一 · 手写字体对比</h1><p>同一字号、排版与渐变，点击字体可单独查看。</p></header>
+<nav class="controls" aria-label="字体预览"><button type="button" data-choice="all" aria-pressed="true">全部对比</button>
+<button type="button" data-choice="A" aria-pressed="false">A · 悠哉</button>
+<button type="button" data-choice="B" aria-pressed="false">B · 清松手写 2</button>
+<button type="button" data-choice="C" aria-pressed="false">C · 清松手写 1</button>
+<button type="button" data-choice="D" aria-pressed="false">D · 霞鹜文楷</button>
+</nav><section class="samples" aria-label="四款手写字体"><article class="sample" data-font="A" style="--quote-font:'Yi Yi Preview A'">
+<header class="sample-label"><h2><span class="letter">A</span>悠哉</h2><p>松弛、轻盈，像随手写下的笔记</p></header>
+<figure class="yi-yi" id="sample-A">
+      <blockquote>
+        <div class="yi-yi-still">
+          <img src="../images/yi-yi.jpg" width="720" height="391"
+            alt="Yang-Yang holding a camera to his eye in Yi Yi" decoding="async">
+          <p class="yi-yi-chinese chinese-text" lang="zh-Hans"><span>我不知道的事情太多了，所以，你知道我以后想做什么吗？</span><span>我要去告诉别人他们不知道的事，给别人看他们看不到的东西，我想，这样一定天天都很好玩。</span></p>
+        </div>
+      </blockquote>
+      <!-- English subtitle wording: Edward Yang and Tony Rayns, as credited at
+          https://www.criterion.com/films/781-yi-yi and transcribed at
+          https://www.subtitlecat.com/subs/9/Yi%20Yi.html.
+          Excerpt starts after "But, Grandma," to match the Chinese selection;
+          subtitle line breaks are joined and sentence punctuation is added. -->
+      <figcaption class="yi-yi-english"><span lang="en">I know so little. Do you know what I want to do when I grow up? I want to tell people things they don’t know. Show them stuff they haven’t seen. </span><span class="yi-yi-ending"><span lang="en">It’ll be so much fun.</span> <cite class="yi-yi-attribution"><a class="chinese-text" lang="zh-Hans" href="https://zh.wikipedia.org/wiki/%E4%B8%80%E4%B8%80" target="_blank" rel="noopener noreferrer">一一</a> · <a href="https://en.wikipedia.org/wiki/Yi_Yi" lang="en" target="_blank" rel="noopener noreferrer">Yi Yi</a></cite></span></figcaption>
+    </figure>
+</article><article class="sample" data-font="B" style="--quote-font:'Yi Yi Preview B'">
+<header class="sample-label"><h2><span class="letter">B</span>清松手写 2</h2><p>秀气、细长，手写感更明显</p></header>
+<figure class="yi-yi" id="sample-B">
+      <blockquote>
+        <div class="yi-yi-still">
+          <img src="../images/yi-yi.jpg" width="720" height="391"
+            alt="Yang-Yang holding a camera to his eye in Yi Yi" decoding="async">
+          <p class="yi-yi-chinese chinese-text" lang="zh-Hans"><span>我不知道的事情太多了，所以，你知道我以后想做什么吗？</span><span>我要去告诉别人他们不知道的事，给别人看他们看不到的东西，我想，这样一定天天都很好玩。</span></p>
+        </div>
+      </blockquote>
+      <!-- English subtitle wording: Edward Yang and Tony Rayns, as credited at
+          https://www.criterion.com/films/781-yi-yi and transcribed at
+          https://www.subtitlecat.com/subs/9/Yi%20Yi.html.
+          Excerpt starts after "But, Grandma," to match the Chinese selection;
+          subtitle line breaks are joined and sentence punctuation is added. -->
+      <figcaption class="yi-yi-english"><span lang="en">I know so little. Do you know what I want to do when I grow up? I want to tell people things they don’t know. Show them stuff they haven’t seen. </span><span class="yi-yi-ending"><span lang="en">It’ll be so much fun.</span> <cite class="yi-yi-attribution"><a class="chinese-text" lang="zh-Hans" href="https://zh.wikipedia.org/wiki/%E4%B8%80%E4%B8%80" target="_blank" rel="noopener noreferrer">一一</a> · <a href="https://en.wikipedia.org/wiki/Yi_Yi" lang="en" target="_blank" rel="noopener noreferrer">Yi Yi</a></cite></span></figcaption>
+    </figure>
+</article><article class="sample" data-font="C" style="--quote-font:'Yi Yi Preview C'">
+<header class="sample-label"><h2><span class="letter">C</span>清松手写 1</h2><p>圆润、温和，保留自然的笔迹</p></header>
+<figure class="yi-yi" id="sample-C">
+      <blockquote>
+        <div class="yi-yi-still">
+          <img src="../images/yi-yi.jpg" width="720" height="391"
+            alt="Yang-Yang holding a camera to his eye in Yi Yi" decoding="async">
+          <p class="yi-yi-chinese chinese-text" lang="zh-Hans"><span>我不知道的事情太多了，所以，你知道我以后想做什么吗？</span><span>我要去告诉别人他们不知道的事，给别人看他们看不到的东西，我想，这样一定天天都很好玩。</span></p>
+        </div>
+      </blockquote>
+      <!-- English subtitle wording: Edward Yang and Tony Rayns, as credited at
+          https://www.criterion.com/films/781-yi-yi and transcribed at
+          https://www.subtitlecat.com/subs/9/Yi%20Yi.html.
+          Excerpt starts after "But, Grandma," to match the Chinese selection;
+          subtitle line breaks are joined and sentence punctuation is added. -->
+      <figcaption class="yi-yi-english"><span lang="en">I know so little. Do you know what I want to do when I grow up? I want to tell people things they don’t know. Show them stuff they haven’t seen. </span><span class="yi-yi-ending"><span lang="en">It’ll be so much fun.</span> <cite class="yi-yi-attribution"><a class="chinese-text" lang="zh-Hans" href="https://zh.wikipedia.org/wiki/%E4%B8%80%E4%B8%80" target="_blank" rel="noopener noreferrer">一一</a> · <a href="https://en.wikipedia.org/wiki/Yi_Yi" lang="en" target="_blank" rel="noopener noreferrer">Yi Yi</a></cite></span></figcaption>
+    </figure>
+</article><article class="sample" data-font="D" style="--quote-font:'Yi Yi Preview D'">
+<header class="sample-label"><h2><span class="letter">D</span>霞鹜文楷</h2><p>端正、安静，接近原来姓名的气质</p></header>
+<figure class="yi-yi" id="sample-D">
+      <blockquote>
+        <div class="yi-yi-still">
+          <img src="../images/yi-yi.jpg" width="720" height="391"
+            alt="Yang-Yang holding a camera to his eye in Yi Yi" decoding="async">
+          <p class="yi-yi-chinese chinese-text" lang="zh-Hans"><span>我不知道的事情太多了，所以，你知道我以后想做什么吗？</span><span>我要去告诉别人他们不知道的事，给别人看他们看不到的东西，我想，这样一定天天都很好玩。</span></p>
+        </div>
+      </blockquote>
+      <!-- English subtitle wording: Edward Yang and Tony Rayns, as credited at
+          https://www.criterion.com/films/781-yi-yi and transcribed at
+          https://www.subtitlecat.com/subs/9/Yi%20Yi.html.
+          Excerpt starts after "But, Grandma," to match the Chinese selection;
+          subtitle line breaks are joined and sentence punctuation is added. -->
+      <figcaption class="yi-yi-english"><span lang="en">I know so little. Do you know what I want to do when I grow up? I want to tell people things they don’t know. Show them stuff they haven’t seen. </span><span class="yi-yi-ending"><span lang="en">It’ll be so much fun.</span> <cite class="yi-yi-attribution"><a class="chinese-text" lang="zh-Hans" href="https://zh.wikipedia.org/wiki/%E4%B8%80%E4%B8%80" target="_blank" rel="noopener noreferrer">一一</a> · <a href="https://en.wikipedia.org/wiki/Yi_Yi" lang="en" target="_blank" rel="noopener noreferrer">Yi Yi</a></cite></span></figcaption>
+    </figure>
+</article>
+</section><footer class="sources">字体来源：<a href="https://github.com/lxgw/yozai-font" target="_blank" rel="noopener noreferrer">悠哉</a><a href="https://github.com/jasonhandwriting/JasonHandwriting" target="_blank" rel="noopener noreferrer">清松手写</a><a href="https://github.com/lxgw/LxgwWenKai" target="_blank" rel="noopener noreferrer">霞鹜文楷</a> · <a href="../index.html#yi-yi" target="_blank" rel="noopener noreferrer">当前主页</a></footer>
+</main><script>
+const buttons = [...document.querySelectorAll('[data-choice]')];
+const samples = [...document.querySelectorAll('[data-font]')];
+function show(choice) {
+ if (!['all', 'A', 'B', 'C', 'D'].includes(choice)) choice = 'all';
+ for (const button of buttons) button.setAttribute('aria-pressed', String(button.dataset.choice === choice));
+ for (const sample of samples) sample.hidden = choice !== 'all' && sample.dataset.font !== choice;
+ document.querySelector('.samples').classList.toggle('single', choice !== 'all');
+}
+for (const button of buttons) button.addEventListener('click', () => {
+ show(button.dataset.choice);
+ history.replaceState(null, '', '#' + button.dataset.choice);
+});
+window.addEventListener('hashchange', () => show(location.hash.slice(1)));
+show(location.hash.slice(1));
+</script></body></html>
