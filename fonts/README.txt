@@ -10,8 +10,9 @@ Created with fontTools. Glyph outlines are unchanged. Family and PostScript
 names identify this subset as Yi Yi Handwriting. Copyright and license
 metadata are retained in the font.
 
-Coverage: the Chinese Yi Yi quotation in index.html, its Chinese title, and
-space. If that text changes, regenerate the subset from the upstream TTF.
+Coverage: the Chinese Yi Yi quotation in index.html, its Chinese title,
+space, and opening/closing double quotation marks. If that text changes,
+regenerate the subset from the upstream TTF.
 Characters outside the subset fall back to the existing Chinese font stack.
 
 The previous Xiaolai subset (yi-yi-handwriting.woff2) is retained with its

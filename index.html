@@ -127,7 +127,7 @@
   <style>
     @font-face {
       font-family: 'Yi Yi Handwriting';
-      src: url('fonts/yi-yi-yozai.woff2') format('woff2');
+      src: url('fonts/yi-yi-yozai.woff2?v=2') format('woff2');
       font-style: normal;
       font-weight: 400;
       font-display: swap;
@@ -234,27 +234,29 @@
         padding: 0 20px;
       }
 
+      .yi-yi img {
+        min-height: 13.333rem;
+        object-fit: cover;
+        object-position: 56% center;
+      }
+
       .yi-yi-still::after {
-        display: none;
+        background: linear-gradient(90deg,
+          rgba(246, 248, 243, 0.64) 0%,
+          rgba(246, 248, 243, 0.58) 28%,
+          rgba(246, 248, 243, 0.54) 44%,
+          rgba(246, 248, 243, 0.12) 56%,
+          rgba(246, 248, 243, 0) 66%);
       }
 
       .yi-yi-chinese {
-        position: static;
-        width: auto;
-        margin-top: 20px;
-        transform: none;
-        color: #28323a;
-        font-size: 1.133rem;
-        line-height: 1.8;
-        text-wrap: balance;
-      }
-
-      .yi-yi-chinese span {
-        display: inline;
+        width: 44%;
+        font-size: clamp(0.867rem, 2.4vw, 1rem);
+        line-height: 1.55;
       }
 
       .yi-yi-chinese span + span {
-        margin-top: 0;
+        margin-top: 8px;
       }
 
       .yi-yi-english {
@@ -485,7 +487,7 @@
         <div class="yi-yi-still">
           <img src="images/yi-yi.jpg" width="720" height="391"
             alt="Yang-Yang holding a camera to his eye in Yi Yi" loading="lazy" decoding="async">
-          <p class="yi-yi-chinese chinese-text" lang="zh-Hans"><span>我不知道的事情太多了，所以，你知道我以后想做什么吗？</span><span>我要去告诉别人他们不知道的事，给别人看他们看不到的东西，我想，这样一定天天都很好玩。</span></p>
+          <p class="yi-yi-chinese chinese-text" lang="zh-Hans"><span>“我不知道的事情太多了，所以，你知道我以后想做什么吗？</span><span>我要去告诉别人他们不知道的事，给别人看他们看不到的东西，我想，这样一定天天都很好玩。”</span></p>
         </div>
       </blockquote>
       <!-- English subtitle wording: Edward Yang and Tony Rayns, as credited at
